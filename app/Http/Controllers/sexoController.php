@@ -19,7 +19,8 @@ class sexoController extends Controller
 
         //$name = DB::table('mcD')->pluck('name');
         //$name = mcD::where('id', $id)->get(); //same as mcD::find($id);
-        $name = mcD::find($id);
+        //$name = mcD::find($id);
+        $name = mcD::all();
          return $name;
     }
 
