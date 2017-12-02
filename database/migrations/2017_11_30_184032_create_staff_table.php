@@ -6,6 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateStaffTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -31,4 +32,5 @@ class CreateStaffTable extends Migration
     {
         Schema::dropIfExists('Staff');
     }
+
 }
