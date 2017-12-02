@@ -7,13 +7,19 @@ use App\Repositories\Contracts\UserRepository;
 use Illuminate\Http\Request;
 use App\Transformers\UserTransformer;
 use Test;
+use DB;
 
 class MyController extends Controller
 {
     public function show($id)
     {
-        return response()->json(['name' => 'Jesse', 'id' => $id]);
-        Test::insert('insert into mcDick (id, name) values (?, ?)', [1, 'Luis']);
+        /*DB::table('mcD')->insert(
+            ['name' => 'Heribertooooooo']
+        );*/
+
+        $name = DB::table('mcD')->pluck('name');
+
+        return $name;
     }
 
 
