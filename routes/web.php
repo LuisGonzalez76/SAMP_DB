@@ -45,3 +45,13 @@ $app->put('messages/{id}', 'MessageController@update');
 $app->delete('messages/{id}', 'MessageController@destroy');
 
 $app->get('sexo/{id}', 'sexoController@show');
+
+
+/**
+ * Routes for resource facility
+ */
+$app->get('api/facility', 'FacilitiesController@all');
+$app->get('facility/{id}', 'FacilitiesController@get');
+$app->post('facility', 'FacilitiesController@add');
+$app->put('facility/{id}', 'FacilitiesController@put');
+$app->delete('facility/{id}', 'FacilitiesController@remove');
