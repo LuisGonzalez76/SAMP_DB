@@ -3,6 +3,7 @@ use App\Models\User;
 use App\Repositories\Contracts\UserRepository;
 use Illuminate\Http\Request;
 use App\Transformers\UserTransformer;
+use App\Facility;
 use DB;
 
 class FacilitiesController extends Controller {
@@ -15,7 +16,9 @@ class FacilitiesController extends Controller {
 
     public function all(){
 
-        $facilities = DB::table('Facility')->get();
+        //$facilities = DB::table('Facility')->get();
+
+        $facilities = Facility::all();
 
         return $facilities;
 
